@@ -1,0 +1,22 @@
+<h1>835</h1>
+<p>
+  PDF Generating<span id="thinking"></span>
+</p>
+
+<script>
+  // This would be better as an websocket, push 
+  // notification event, or AJAX call to an endpoint,
+  // but refreshing the page also works.
+
+  // add a dot every second
+  setInterval(function() {
+    var thinking = document.getElementById("thinking");
+    thinking.innerHTML = thinking.innerHTML + '.';
+  }, 1000);
+
+  // reload the page after 5 seconds
+  setTimeout(function() {
+    window.location.reload();
+  }, 5000);
+</script>
+
