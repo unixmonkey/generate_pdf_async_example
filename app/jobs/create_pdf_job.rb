@@ -10,7 +10,9 @@ class CreatePdfJob < ApplicationJob
     # Render template as PDF
     pdf_contents = ApplicationController.render(
       pdf: "mypdf",
-      template: "issues/issue835.pdf"
+      template: "issues/issue835.pdf",
+      locals: { local_variable: "THIS IS A LOCAL VARIABLE" },
+      assigns: { instance_variable: "THIS IS AN INSTANCE VARIABLE" }
     )
 
     # Simulate slow PDF generation
